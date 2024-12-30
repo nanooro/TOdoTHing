@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body class="min-h-screen flex flex-col justify-center items-center">
+    <div
+      id="wrapper"
+      class="flex flex-col justify-center items-center m-12 space-y-6"
+    >
+      <!-- User Input Task Card -->
+      <div
+        id="tasksInputCard"
+        class="flex justify-center items-center flex-col outline h-fit w-fit rounded-md p-5 overflow-y-auto"
+      >
+        <!-- User Input Task Section -->
+        <div
+          id="userInputTask"
+          class="flex justify-center items-center gap-6 mb-4"
+        >
+          <input
+            type="text"
+            id="userInput"
+            class="outline h-8 rounded-sm"
+            placeholder="Your task"
+          />
+          <button
+            id="addBtn"
+            class="w-12 h-8 outline bg-blue-500 outline-blue-500 text-base font-medium text-white text-center rounded-md flex items-center justify-center focus:border-green-600"
+          >
+            Add
+          </button>
+        </div>
+        <div id="taskPreviewCard" class="flex justify-center m-2">
+          <p id="taskPreview" class="">Task preview</p>
+        </div>
+      </div>
+      <!-- Global Task List -->
+      <div
+        id="globalTaskList"
+        class="flex justify-center outline border-2 border-gray-300 rounded-md p-4 w-72 max-h-[60vh] overflow-y-auto"
+      >
+        <div id="tasklets" class="flex flex-col justify-start mb-2 w-full">
+          <ol id="tasks" class="list-decimal space-y-2"></ol>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
